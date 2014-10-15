@@ -1,0 +1,9 @@
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\bin\Debug\ejercicio1.exe
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\bin\Debug\ejercicio1.pdb
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\bin\Debug\ejercicio1.xml
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\obj\x86\Debug\ejercicio1.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\obj\x86\Debug\ejercicio1.exe
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\obj\x86\Debug\ejercicio1.xml
+C:\Users\Beatriz\documents\visual studio 2010\Projects\ejercicio1\ejercicio1\obj\x86\Debug\ejercicio1.pdb

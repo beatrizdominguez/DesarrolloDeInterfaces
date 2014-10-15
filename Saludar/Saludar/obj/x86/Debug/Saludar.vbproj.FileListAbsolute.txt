@@ -1,0 +1,9 @@
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\bin\Debug\Saludar.exe
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\bin\Debug\Saludar.pdb
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\bin\Debug\Saludar.xml
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\obj\x86\Debug\Saludar.Form1.resources
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\obj\x86\Debug\Saludar.Resources.resources
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\obj\x86\Debug\Saludar.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\obj\x86\Debug\Saludar.exe
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\obj\x86\Debug\Saludar.xml
+C:\Users\Beatriz\AppData\Local\Temporary Projects\Saludar\obj\x86\Debug\Saludar.pdb
