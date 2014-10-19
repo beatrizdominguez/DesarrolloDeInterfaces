@@ -43,4 +43,27 @@
 
 
     'End Sub
+
+
+    Public Function operaciones(ByVal a As Double, ByVal res As Double, ByVal op As Integer) As Double
+        If res = 0 Then
+            res = a
+        Else
+            'realizamos la operaión y calculamos el resultado hasta ahora, según la última operación realizada
+            If op = 1 Then
+                res = res + a
+            ElseIf op = 2 Then
+                res = res - a
+            ElseIf op = 3 Then
+                res = res * a
+            ElseIf op = 4 Then
+                res = res / a
+
+            End If
+        End If
+        Return res
+        '?devuelve los 2??
+    End Function
+
+
 End Module
