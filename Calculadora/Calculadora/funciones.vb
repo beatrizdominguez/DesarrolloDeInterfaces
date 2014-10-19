@@ -1,9 +1,26 @@
 ﻿Module funciones
 
-    Public Function bnt01(ByVal a As Double)
 
-        Return a
-    End Function
+    Public Sub numero2(ByVal a As Double, ByVal coma As Boolean, ByVal dec As Integer, ByVal num As Integer, ByVal numeros As Array)
+        ' Dim numeros(2) As Double
+
+
+        'añadimos el número y lo mostramos por pantalla
+        If coma = False Then
+            a = a * 10 + num
+        Else
+            a = a + num / 10 ^ dec
+            dec = dec + num
+        End If
+
+        Calculadora.TxtAbajoA.Text = a
+        Calculadora.TxtAbajo.Text = a
+
+        numeros(0) = a
+        numeros(1) = dec
+
+    End Sub
+  
 
     'Public Sub kids()
     '    'GrbNinos.Show()
@@ -64,6 +81,5 @@
         Return res
         '?devuelve los 2??
     End Function
-
 
 End Module
