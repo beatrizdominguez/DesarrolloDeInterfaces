@@ -2,31 +2,23 @@
 
     Public Sub kidsLayout()
 
-        Calculadora.BackColor = Color.White
-
         'mostrar en que menú contextual te encuentras
         Calculadora.KidsToolStripMenuItem.BackColor = Color.Orange
         Calculadora.EmpresaToolStripMenuItem.BackColor = Color.Empty
         Calculadora.OldToolStripMenuItem.BackColor = Color.Empty
 
+        'definimos el formulario
+        Calculadora.BackColor = Color.White
 
-        ' Calculadora.KidsToolStripMenuItem.BackColor = Color.Empty
-
-
-
-
-        'mostrar botones
+        'mostrar grupos de botones
         Calculadora.GrbNinos.Show()
         Calculadora.GrbAbuelos.Hide()
         Calculadora.GrbCint.Hide()
         'boton 00
         Calculadora.Btn00.Hide()
-
         Calculadora.GrbTxtA.Hide()
         Calculadora.GrbTxt.Show()
-
         Calculadora.TxtArriba.Height = 50
-
         'panel oculto de la derecha
         Calculadora.Panel1.Show()
         Calculadora.BtnMas.Text = "->"
@@ -34,11 +26,10 @@
         'formato del formulario
         Calculadora.Width = 425
         Calculadora.Height = 435
-
         'el tamaño del formulario no puede alterarse
         Calculadora.FormBorderStyle = FormBorderStyle.FixedSingle
 
-        'botones
+        'estilo de los botones
         Calculadora.Btn1.FlatStyle = FlatStyle.Flat
         Calculadora.Btn2.FlatStyle = FlatStyle.Flat
         Calculadora.Btn3.FlatStyle = FlatStyle.Flat
@@ -64,22 +55,22 @@
 
     Public Sub businessLayout()
 
-        Calculadora.BackColor = Color.DarkGray
-        ' Calculadora.BackgroundImage = ""
-        Calculadora.GrbCint.Location = New Point(295, 145)
-
         'mostrar en que menú contextual te encuentras
         Calculadora.KidsToolStripMenuItem.BackColor = Color.Empty
         Calculadora.EmpresaToolStripMenuItem.BackColor = Color.Gray
         Calculadora.OldToolStripMenuItem.BackColor = Color.Empty
 
-        'mostrar botones
+        'definimos el formulario
+        Calculadora.BackColor = Color.DarkGray
+        ' Calculadora.BackgroundImage = ""
+        Calculadora.GrbCint.Location = New Point(295, 145)
+
+        'mostrar grupos de botones
         Calculadora.GrbNinos.Show()
         Calculadora.GrbAbuelos.Hide()
         Calculadora.GrbCint.Show()
         'boton 00
         Calculadora.Btn00.Show()
-
         Calculadora.GrbTxtA.Hide()
         Calculadora.GrbTxt.Show()
 
@@ -94,7 +85,7 @@
         'el tamaño del formulario no puede alterarse
         Calculadora.FormBorderStyle = FormBorderStyle.FixedSingle
 
-
+        'estilo de los botones
         Calculadora.Btn1.FlatStyle = FlatStyle.System
         Calculadora.Btn2.FlatStyle = FlatStyle.System
         Calculadora.Btn3.FlatStyle = FlatStyle.System
@@ -122,29 +113,24 @@
 
     Public Sub oldLayout()
 
-        Calculadora.BackColor = Color.Empty
-
-
-
         'mostrar en que menú contextual te encuentras
         Calculadora.KidsToolStripMenuItem.BackColor = Color.Empty
         Calculadora.EmpresaToolStripMenuItem.BackColor = Color.Empty
         Calculadora.OldToolStripMenuItem.BackColor = Color.Red
+
+        'definimos el formulario
+        Calculadora.BackColor = Color.Empty
         Calculadora.GrbTxtA.Location = New Point(15, 28)
         Calculadora.GrbAbuelos.Location = New Point(3, 260)
 
-        'mostrar botones
+        'mostrar grupos de botones
         Calculadora.GrbNinos.Hide()
         Calculadora.GrbAbuelos.Show()
         Calculadora.GrbCint.Hide()
-        ' Calculadora.GrbAbuelos.BringToFront()
-
         'boton 00
         Calculadora.Btn00.Hide()
-
         Calculadora.GrbTxtA.Show()
         Calculadora.GrbTxt.Hide()
-
         Calculadora.TxtArriba.Height = 150
         Calculadora.Panel1.Hide()
 

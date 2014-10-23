@@ -139,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Calculator_2.ico" />
+    <None Include="Resources\El rey león 3.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">

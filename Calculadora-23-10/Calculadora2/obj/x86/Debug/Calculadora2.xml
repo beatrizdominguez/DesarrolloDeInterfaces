@@ -6,12 +6,60 @@ Calculadora2
 </name>
 </assembly>
 <members>
-<member name="T:Calculadora2.Calculadora">
+<member name="M:Calculadora2.funciones.numero(System.Double,System.Boolean,System.Int32,System.Int32,System.Array)">
 	<summary>
- Calculadora
- by: Beatriz Domínguez
+ calcula el número
  </summary>
-	<remarks>DAM 2014- Desarrollo de interfaces</remarks>
+	<param name="a">número</param>
+	<param name="coma">boolean para saber si hay o no decimales</param>
+	<param name="dec">contador de decimales</param>
+	<param name="num">número que añadimos</param>
+	<param name="numeros">array para retornar las variables</param>
+	<remarks></remarks>
+</member><member name="M:Calculadora2.funciones.factorial(System.Double)">
+	<summary>
+ calculamos el factorial de un número (n* n-1 * n-2 * ... * 1)
+ </summary>
+	<param name="a">numero del que calculamos el factorial</param>
+	<returns>a, resultado de la operación</returns>
+	<remarks></remarks>
+</member><member name="M:Calculadora2.funciones.operaciones(System.Double,System.Double,System.Int32)">
+	<summary>
+ realizamos la operación necesaria
+ </summary>
+	<param name="a">nuevo número con el que operar</param>
+	<param name="res">número con el que operar resultado de las operaciones anteriores</param>
+	<param name="op">tipo de operación a realizar</param>
+	<returns>res, resultado de la operacion</returns>
+	<remarks></remarks>
+</member><member name="M:Calculadora2.funciones.mostrarArriba(System.String)">
+	<summary>
+ mostramos las operaciones realizadas por pantalla
+ </summary>
+	<param name="stringA">conjunto de operaciones realizadas</param>
+	<remarks></remarks>
+</member><member name="M:Calculadora2.funciones.addLst(System.Double,System.Int32)">
+	<summary>
+ añadimos la operación a la lista en la vista de los niños
+ </summary>
+	<param name="a">número a añadir</param>
+	<param name="op">tipo de operación a añadir</param>
+	<remarks></remarks>
+</member><member name="M:Calculadora2.funciones.addRes(System.Double)">
+	<summary>
+ añadimos el resultado a la lista en la vista de los niños
+ </summary>
+	<param name="res"></param>
+	<remarks></remarks>
+</member><member name="M:Calculadora2.funciones.borrar(System.Double,System.Int32,System.Boolean,System.Array)">
+	<summary>
+ borramos el último número introducido
+ </summary>
+	<param name="a">número a modificar</param>
+	<param name="dec">contador de decimales</param>
+	<param name="coma">boolean para saber si hay o no decimales</param>
+	<param name="numeros">array para retornar las variables</param>
+	<remarks></remarks>
 </member><member name="P:Calculadora2.My.Resources.Resources.ResourceManager">
 	<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
@@ -21,20 +69,28 @@ Calculadora2
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
+</member><member name="P:Calculadora2.My.Resources.Resources._1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Calculadora2.My.Resources.Resources.El_rey_león_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Calculadora2.My.Resources.Resources.images">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="T:Calculadora2.My.Resources.Resources">
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
-</member><member name="M:Calculadora2.funciones.numero(System.Double,System.Boolean,System.Int32,System.Int32,System.Array)">
+</member><member name="T:Calculadora2.Calculadora">
 	<summary>
- calcula el número
+ Calculadora
+ by: Beatriz Domínguez
  </summary>
-	<param name="a">número</param>
-	<param name="coma">boolean para saber si hay o no comas</param>
-	<param name="dec">contados de decimales</param>
-	<param name="num">número que añadimos</param>
-	<param name="numeros">array para retornar las variables</param>
-	<remarks></remarks>
+	<remarks>DAM 2014- Desarrollo de interfaces</remarks>
 </member>
 </members>
 </doc>

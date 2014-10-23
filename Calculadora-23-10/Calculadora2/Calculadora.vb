@@ -12,27 +12,23 @@ Public Class Calculadora
 
     'string que guarda las operaciones que hemos ido realizando
     Dim StringA As String
-    '
-    Dim stringB As String
     'variable double que guarda el nuevo numero que introducimos
     Dim a As Double = 0
-    Dim b As Integer
     'variable double que almacena el resulatado de las operaciones ya realizadas
     Dim res As Double = 0 'definimos que haya sólo 5 decimales
+
     'vaiable que define que tipo de operación hay que realizar
     Dim op As Integer
     '1=sumar     '3=multiplicar
     '2=restar    '4=dividir
     '5=potencia    '6=raiz
+
     'variables para controlar los decimales
     Dim coma As Boolean = False
     Dim dec As Integer = 1
 
     'variable string auxiliar para borrar uno de los carácteres
     Dim txtBorrar As String
-
-    '  Dim signo As Boolean = False
-
     'vector que devulve los valores de a y dec del método
     Dim numeros(2) As Double
 
@@ -119,9 +115,7 @@ Public Class Calculadora
         dec = numeros(1)
     End Sub
 
-
-
-    Private Sub BtnIg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click, BtnIg.Click
+    Private Sub BtnIg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAIg.Click, BtnIg.Click
 
         'realiza una u otra operación según el botón al que se le haya hecho clic
         If op = 1 Then
@@ -170,7 +164,7 @@ Public Class Calculadora
     End Sub
 
     'borramos todos los datos que tenemos, inicializamos las variables a 0 o vacío
-    Private Sub BtnC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click, BtnC.Click
+    Private Sub BtnC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAC.Click, BtnC.Click
 
         a = 0
         'b = 0
@@ -184,23 +178,21 @@ Public Class Calculadora
         coma = False
         dec = 1
         StringA = ""
-        stringB = ""
 
     End Sub
 
 
-    Private Sub BtnSum_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click, BtnSum.Click
+    Private Sub BtnSum_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnASum.Click, BtnSum.Click
 
         'realizamos la operación anterior
         res = operaciones(a, res, op)
 
         'convertimos el número a string y lo añadimos a las peraciones anteriores para mostrarlo
         If StringA = "" Then
-            StringA = CStr(a)
-            StringA = StringA + " + "
+
+            StringA = CStr(a) + " + "
         Else
-            stringB = CStr(a)
-            StringA = StringA + stringB + " + "
+            StringA = StringA + CStr(a) + " + "
         End If
 
         'añadimos el número y la operación a la lista
@@ -219,18 +211,16 @@ Public Class Calculadora
 
     End Sub
 
-    Private Sub BtnRes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click, BtnRes.Click
+    Private Sub BtnRes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnARes.Click, BtnRes.Click
 
         'realizamos la operación anterior
         res = operaciones(a, res, op)
 
         'convertimos el número a string y lo añadimos a las peraciones anteriores para mostrarlo
         If StringA = "" Then
-            StringA = CStr(a)
-            StringA = StringA + " - "
+            StringA = CStr(a) + " - "
         Else
-            stringB = CStr(a)
-            StringA = StringA + stringB + " - "
+            StringA = StringA + CStr(a) + " - "
         End If
 
         'añadimos el número y la operación a la lista
@@ -249,32 +239,22 @@ Public Class Calculadora
 
     End Sub
 
-    Private Sub BtnMult_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click, BtnMult.Click
+    Private Sub BtnMult_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAMult.Click, BtnMult.Click
 
         'realizamos la operación anterior
         res = operaciones(a, res, op)
 
         'convertimos el número a string y lo añadimos a las peraciones anteriores para mostrarlo
         If StringA = "" Then
-            StringA = CStr(a)
-            StringA = StringA + " X "
+
+            StringA = CStr(a) + " X "
         Else
-            stringB = CStr(a)
-            StringA = StringA + stringB + " X "
+            StringA = StringA + CStr(a) + " X "
         End If
 
         'vaciamos la lista y escribimos el total y luego hacemos la multiplicación
         LstOp.Items.Clear()
         addLst(res, 0)
-
-        '' intentar concatenar la multiplicación, perimero pone el resultado
-        'If LstOp.Items.Count <> 1 Then
-        '    addLst(a, 3)
-        '    addRes(res)
-        'Else
-        '    LstOp.Items.Clear()
-        'End If
-
 
         'mostramos por pantalla la información
         mostrarArriba(StringA)
@@ -289,18 +269,16 @@ Public Class Calculadora
 
     End Sub
 
-    Private Sub BtnDiv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click, BtnDiv.Click
+    Private Sub BtnDiv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnADiv.Click, BtnDiv.Click
 
         'realizamos la operación anterior
         res = operaciones(a, res, op)
 
         'convertimos el número a string y lo añadimos a las peraciones anteriores para mostrarlo
         If StringA = "" Then
-            StringA = CStr(a)
-            StringA = StringA + " ÷ "
+            StringA = CStr(a) + " ÷ "
         Else
-            stringB = CStr(a)
-            StringA = StringA + stringB + " ÷ "
+            StringA = StringA + CStr(a) + " ÷ "
         End If
 
         'vaciamos la lista y escribimos el total y luego hacemos la divixión
@@ -321,35 +299,14 @@ Public Class Calculadora
     End Sub
 
     'borramos el último dígito del número introducido
-    Private Sub BtnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBorrar.Click, Button20.Click
+    Private Sub BtnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBorrar.Click, BtnABorrar.Click
 
-        'convertimos el número a string
-        txtBorrar = CStr(a)
+        'llamamos al método para borrar el último número introducido
+        borrar(a, dec, coma, numeros)
 
-        If (txtBorrar.Length > 1) Then
-
-            'borramos el último carácter
-            txtBorrar = txtBorrar.Remove(txtBorrar.Length - 1, 1)
-
-        ElseIf (txtBorrar.Length = 1) Then
-
-            txtBorrar = "0"
-
-        End If
-
-        'si hemos borrado decimales indicar la posición
-        If dec > 1 Then
-            dec = dec - 1
-        End If
-
-        'indicar si ya no hay decimales
-        If dec = 1 Then
-            coma = False
-
-        End If
-
-        'convertimos el nuevo número a double de nuevo
-        a = CDbl(txtBorrar)
+        'guardamos los datos que hemos obtenido del método 'borrar'
+        a = numeros(0)
+        dec = numeros(1)
 
         'mostramos el número
         TxtAbajo.Text = a
@@ -358,7 +315,7 @@ Public Class Calculadora
     End Sub
 
     'indicar si hay coma y mostrarla
-    Private Sub BtnComa_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click, BtnComa.Click
+    Private Sub BtnComa_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAComa.Click, BtnComa.Click
         coma = True
         TxtAbajo.Text = CStr(a) + ","
 
@@ -397,38 +354,38 @@ Public Class Calculadora
 
     End Sub
 
-    Private Sub Button4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSigno.Click
+    Private Sub BtnSigno_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSigno.Click
         'signo = True
         a = -a
         'TxtAbajo.Text = a
         'TxtAbajoA.Text = a
     End Sub
 
-    Private Sub BtnSigno_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRand.Click
+    Private Sub BtnRand_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRand.Click
         'cambiar a un número double de 0 a 1
         TxtAbajo.Text = (1 * Rnd())
 
     End Sub
 
-
-    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnFac.Click
-
+    Private Sub BtnFac_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnFac.Click
+        'calculamos el factorial del número
         TxtAbajo.Text = factorial(a)
     End Sub
+    
 
-    Private Sub Button19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCuadrado.Click
+    Private Sub BtnCuadrado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCuadrado.Click
 
         TxtArriba.Text = CStr(a) + "²"
         TxtAbajo.Text = CStr(FormatNumber(a ^ 2, 5))
     End Sub
 
-    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCubo.Click
+    Private Sub BtnCubo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCubo.Click
 
         TxtArriba.Text = CStr(a) + "³"
         TxtAbajo.Text = CStr(FormatNumber(a ^ 3, 5))
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPorc.Click
+    Private Sub BtnPorc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPorc.Click
         'Dim aux As Double
         TxtArriba.Text = TxtArriba.Text + CStr(a) + "%"
         res = FormatNumber(res + res * (a / 100), 5)
@@ -436,7 +393,7 @@ Public Class Calculadora
 
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnElevado.Click
+    Private Sub BtnElevado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnElevado.Click
 
         res = a
         TxtArriba.Text = CStr(a) + "^"
@@ -451,12 +408,11 @@ Public Class Calculadora
         coma = False
         dec = 1
 
-
     End Sub
 
-    Private Sub Button20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn00.Click
+    Private Sub Butn00_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn00.Click
 
-        'añadimos el número y lo mostramos por pantalla
+        'añadimos dos ceros al número y lo mostramos por pantalla
         If coma = False Then
             a = a * 100
         Else
@@ -464,32 +420,27 @@ Public Class Calculadora
             dec = dec + 2
         End If
         TxtAbajo.Text = a
+
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRaiz.Click
+    Private Sub BtnRaiz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRaiz.Click
 
         TxtArriba.Text = "√" + CStr(a)
         TxtAbajo.Text = CStr(FormatNumber(Math.Sqrt(a), 5))
 
     End Sub
 
-    Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
+    Private Sub BtnExponente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExponente.Click
         TxtArriba.Text = "10^" + CStr(a)
         TxtAbajo.Text = CStr(10 ^ a)
     End Sub
 
-    Private Sub Button16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button16.Click
+    Private Sub BtnRaizCub_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRaizCub.Click
         TxtArriba.Text = "³√" + CStr(a)
         TxtAbajo.Text = CStr(FormatNumber(a ^ (1 / 3), 5))
     End Sub
 
-
-    Private Sub HistorialToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'muestra todas las operaciones realizadas
-        'añadir cada operación a un listbox
-    End Sub
-
-    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+    Private Sub BtnRaiz2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRaiz2.Click
 
         res = a
         TxtArriba.Text = CStr(a) + "√"
@@ -505,7 +456,4 @@ Public Class Calculadora
         dec = 1
     End Sub
 
-    Private Sub Calculadora_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
