@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Calculadora2
+</name>
+</assembly>
+<members>
+<member name="T:Calculadora2.Calculadora">
+	<summary>
+ Calculadora
+ by: Beatriz Domínguez
+ </summary>
+	<remarks>DAM 2014- Desarrollo de interfaces</remarks>
+</member><member name="P:Calculadora2.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:Calculadora2.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="T:Calculadora2.My.Resources.Resources">
+	<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:Calculadora2.funciones.numero(System.Double,System.Boolean,System.Int32,System.Int32,System.Array)">
+	<summary>
+ calcula el número
+ </summary>
+	<param name="a">número</param>
+	<param name="coma">boolean para saber si hay o no comas</param>
+	<param name="dec">contados de decimales</param>
+	<param name="num">número que añadimos</param>
+	<param name="numeros">array para retornar las variables</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
