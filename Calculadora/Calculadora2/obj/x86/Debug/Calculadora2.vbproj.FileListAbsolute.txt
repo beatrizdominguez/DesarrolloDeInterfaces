@@ -1,0 +1,38 @@
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\bin\Debug\Calculadora2.exe
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\bin\Debug\Calculadora2.pdb
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\bin\Debug\Calculadora2.xml
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Calculadora.resources
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Resources.resources
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.exe
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.xml
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.pdb
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.exe
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.xml
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.pdb
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.exe
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.xml
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.pdb
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\bin\Debug\Calculadora2.exe
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\bin\Debug\Calculadora2.pdb
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\bin\Debug\Calculadora2.xml
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Calculadora.resources
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Resources.resources
+C:\Users\Pepe\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.exe
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.xml
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.pdb
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\bin\Debug\Calculadora2.exe
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\bin\Debug\Calculadora2.pdb
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\bin\Debug\Calculadora2.xml
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Calculadora.resources
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Resources.resources
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.History.resources
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\bin\Debug\Calculadora2.exe
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\bin\Debug\Calculadora2.pdb
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\bin\Debug\Calculadora2.xml
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Calculadora.resources
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.History.resources
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.Resources.resources
+C:\Users\Beatriz\Desktop\Calculadora2\Calculadora2\obj\x86\Debug\Calculadora2.vbproj.GenerateResource.Cache
