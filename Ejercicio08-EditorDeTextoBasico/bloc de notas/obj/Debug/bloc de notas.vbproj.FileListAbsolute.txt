@@ -1,0 +1,10 @@
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\bin\Debug\bloc de notas.exe.config
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\bin\Debug\bloc de notas.exe
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\bin\Debug\bloc de notas.pdb
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\bin\Debug\bloc de notas.xml
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\obj\Debug\WindowsApplication1.Frm1.resources
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\obj\Debug\bloc de notas.vbproj.GenerateResource.Cache
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\obj\Debug\bloc de notas.exe
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\obj\Debug\bloc de notas.xml
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\bloc de notas\bloc de notas\obj\Debug\bloc de notas.pdb

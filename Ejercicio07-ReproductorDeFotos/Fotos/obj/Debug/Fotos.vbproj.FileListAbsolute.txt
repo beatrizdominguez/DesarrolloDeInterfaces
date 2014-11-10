@@ -1,0 +1,10 @@
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\bin\Debug\Fotos.exe.config
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\bin\Debug\Fotos.exe
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\bin\Debug\Fotos.pdb
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\bin\Debug\Fotos.xml
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\obj\Debug\WindowsApplication1.Form1.resources
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\obj\Debug\Fotos.vbproj.GenerateResource.Cache
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\obj\Debug\Fotos.exe
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\obj\Debug\Fotos.xml
+C:\Users\usuario\Documents\Visual Studio 2012\Projects\Fotos\Fotos\obj\Debug\Fotos.pdb
