@@ -1,0 +1,33 @@
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.exe
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.pdb
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.xml
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.exe
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.xml
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.pdb
+C:\Users\Beatriz\documents\visual studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.FrmIni.resources
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Info.resources
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.BuscarYReemplazar.resources
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.exe
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.xml
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.pdb
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.exe
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.pdb
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.xml
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.FrmIni.resources
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.BuscarYReemplazar.resources
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Info.resources
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Beatriz\Google Drive\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.exe
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.xml
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.pdb
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.exe
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.pdb
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.xml
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.FrmIni.resources
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.BuscarYReemplazar.resources
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Info.resources
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.vbproj.GenerateResource.Cache
