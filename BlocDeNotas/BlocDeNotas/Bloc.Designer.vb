@@ -26,7 +26,6 @@ Partial Class FrmIni
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmIni))
         Me.OFDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SFDialog = New System.Windows.Forms.SaveFileDialog()
-        Me.TxtText = New System.Windows.Forms.TextBox()
         Me.FntDialog1 = New System.Windows.Forms.FontDialog()
         Me.Mnu = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,7 +43,6 @@ Partial Class FrmIni
         Me.CortarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopiarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.PegarMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BuscarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarSMnu = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,13 +53,16 @@ Partial Class FrmIni
         Me.HoraYFechaMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FuenteMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lblCar = New System.Windows.Forms.Label()
-        Me.lblPal = New System.Windows.Forms.Label()
+        Me.txtCont = New System.Windows.Forms.TextBox()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.RTBText = New System.Windows.Forms.RichTextBox()
+        Me.EliminarMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Mnu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,16 +74,6 @@ Partial Class FrmIni
         'SFDialog
         '
         Me.SFDialog.Filter = "Documento de texto (*.txt)|*.txt| Todos los archivos(*.*)|*.*"
-        '
-        'TxtText
-        '
-        Me.TxtText.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TxtText.Location = New System.Drawing.Point(0, 24)
-        Me.TxtText.Multiline = True
-        Me.TxtText.Name = "TxtText"
-        Me.TxtText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TxtText.Size = New System.Drawing.Size(391, 288)
-        Me.TxtText.TabIndex = 1
         '
         'Mnu
         '
@@ -207,13 +198,6 @@ Partial Class FrmIni
         Me.PegarMnu.Size = New System.Drawing.Size(202, 22)
         Me.PegarMnu.Text = "&Pegar"
         '
-        'EliminarMnu
-        '
-        Me.EliminarMnu.Enabled = False
-        Me.EliminarMnu.Name = "EliminarMnu"
-        Me.EliminarMnu.Size = New System.Drawing.Size(202, 22)
-        Me.EliminarMnu.Text = "Eliminar"
-        '
         'toolStripSeparator4
         '
         Me.toolStripSeparator4.Name = "toolStripSeparator4"
@@ -269,7 +253,7 @@ Partial Class FrmIni
         '
         'HerramientasToolStripMenuItem
         '
-        Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FuenteMnu})
+        Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FuenteMnu, Me.ColorMnu})
         Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
         Me.HerramientasToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
         Me.HerramientasToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
@@ -280,6 +264,12 @@ Partial Class FrmIni
         Me.FuenteMnu.Name = "FuenteMnu"
         Me.FuenteMnu.Size = New System.Drawing.Size(119, 22)
         Me.FuenteMnu.Text = "Fuente..."
+        '
+        'ColorMnu
+        '
+        Me.ColorMnu.Name = "ColorMnu"
+        Me.ColorMnu.Size = New System.Drawing.Size(119, 22)
+        Me.ColorMnu.Text = "Color..."
         '
         'AyudaToolStripMenuItem
         '
@@ -303,51 +293,59 @@ Partial Class FrmIni
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 315)
+        Me.Label1.Location = New System.Drawing.Point(326, 319)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(21, 13)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "pal"
         '
-        'TextBox1
+        'txtCont
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TextBox1.Location = New System.Drawing.Point(0, 316)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(391, 20)
-        Me.TextBox1.TabIndex = 4
-        Me.TextBox1.Text = "Palabras:             Caractéres:"
+        Me.txtCont.BackColor = System.Drawing.SystemColors.Control
+        Me.txtCont.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.txtCont.Location = New System.Drawing.Point(0, 316)
+        Me.txtCont.Name = "txtCont"
+        Me.txtCont.ReadOnly = True
+        Me.txtCont.Size = New System.Drawing.Size(391, 20)
+        Me.txtCont.TabIndex = 4
+        Me.txtCont.Text = "Líneas:  0      Caractéres:    0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'lblCar
+        'RTBText
         '
-        Me.lblCar.AutoSize = True
-        Me.lblCar.Location = New System.Drawing.Point(146, 319)
-        Me.lblCar.Name = "lblCar"
-        Me.lblCar.Size = New System.Drawing.Size(13, 13)
-        Me.lblCar.TabIndex = 5
-        Me.lblCar.Text = "0"
+        Me.RTBText.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RTBText.Location = New System.Drawing.Point(0, 24)
+        Me.RTBText.Name = "RTBText"
+        Me.RTBText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.RTBText.Size = New System.Drawing.Size(391, 292)
+        Me.RTBText.TabIndex = 7
+        Me.RTBText.Text = ""
         '
-        'lblPal
+        'EliminarMnu
         '
-        Me.lblPal.AutoSize = True
-        Me.lblPal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPal.Location = New System.Drawing.Point(54, 319)
-        Me.lblPal.Name = "lblPal"
-        Me.lblPal.Size = New System.Drawing.Size(13, 13)
-        Me.lblPal.TabIndex = 6
-        Me.lblPal.Text = "0"
+        Me.EliminarMnu.Enabled = False
+        Me.EliminarMnu.Name = "EliminarMnu"
+        Me.EliminarMnu.Size = New System.Drawing.Size(202, 22)
+        Me.EliminarMnu.Text = "Eliminar"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(275, 7)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Label2"
         '
         'FrmIni
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(391, 336)
-        Me.Controls.Add(Me.lblPal)
-        Me.Controls.Add(Me.lblCar)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.RTBText)
+        Me.Controls.Add(Me.txtCont)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TxtText)
         Me.Controls.Add(Me.Mnu)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmIni"
@@ -360,7 +358,6 @@ Partial Class FrmIni
     End Sub
     Friend WithEvents OFDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents SFDialog As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents TxtText As System.Windows.Forms.TextBox
     Friend WithEvents FntDialog1 As System.Windows.Forms.FontDialog
     Friend WithEvents Mnu As System.Windows.Forms.MenuStrip
     Friend WithEvents ArchivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -384,7 +381,6 @@ Partial Class FrmIni
     Friend WithEvents FuenteMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EliminarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarSMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
@@ -393,8 +389,11 @@ Partial Class FrmIni
     Friend WithEvents HoraYFechaMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents lblCar As System.Windows.Forms.Label
-    Friend WithEvents lblPal As System.Windows.Forms.Label
+    Friend WithEvents txtCont As System.Windows.Forms.TextBox
+    Friend WithEvents ColorMnu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
+    Friend WithEvents RTBText As System.Windows.Forms.RichTextBox
+    Friend WithEvents EliminarMnu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class
