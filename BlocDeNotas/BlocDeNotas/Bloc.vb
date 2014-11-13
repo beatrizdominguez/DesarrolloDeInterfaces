@@ -1,12 +1,12 @@
 ﻿Imports System.IO
+Imports System.Text.RegularExpressions
 
-
-''
-''ARREGLAR
-''
-'BUSCAR SIGUIENTE
-'FORMULARIO ACERCA DE
-
+''' <summary>
+''' Editor de texto
+''' </summary>
+''' <Autor>
+''' Beatriz Domínguez
+''' </Autor>
 
 Public Class FrmIni
 
@@ -19,51 +19,52 @@ Public Class FrmIni
     Dim sr As StreamReader
     'boolean para saber si se han producido cambios o no
     Dim cambios As Boolean = False
-    Dim palabras As Integer
-
+    
 #End Region
 
 #Region "Archivo"
-    Private Sub NuevoMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NuevoMnu.Click
+
+    ''' <summary>
+    ''' Creamos un nuevo archivo.
+    ''' </summary>
+    ''' <remarks>
+    ''' Si hay cambios sin guardar se da la opción de guardar antes de crear el nuevo archivo.
+    ''' </remarks>
+    Private Sub Nuevo(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NuevoMnu.Click
 
         Dim Result As DialogResult
 
+        'Si hay cambios a guardar.
         If cambios = True Then
 
-            'Mostramos el mensaje y guardamos el resultado
+            'Mostramos el mensaje y guardamos el resultado.
             Result = MessageBox.Show("¿Desea guardar el archivo?", "Nuevo", MessageBoxButtons.YesNoCancel)
 
             'NO
             If Result = 7 Then
-                cambios = False
 
-
+                'Reiniciamos todas las variables.
                 RTBText.Clear()
-                ' TxtText22.Clear()
                 fichero = ""
-                ' deshabilitar()
-                deshabilitarVacio()
-                deshabilitarSelect()
+                deshabilitar()
                 cambios = False
 
                 'YES
             ElseIf Result = 6 Then
 
-                'guardamos el archivo
-                GuardarCMnu_Click(sender, e)
+                'Guardamos el archivo.
+                GuardarComo(sender, e)
 
+                'Reiniciamos todas las variables.
                 RTBText.Clear()
-                ' TxtText22.Clear()
                 fichero = ""
-                '  deshabilitar()
-                deshabilitarVacio()
-                deshabilitarSelect()
+                deshabilitar()
                 cambios = False
 
                 'CANCEL
             ElseIf Result = 2 Then
 
-                'no hace nada
+                'no hace nada. Volvemos al formulario.
             End If
 
         End If
@@ -72,78 +73,94 @@ Public Class FrmIni
 
     End Sub
 
-    Private Sub AbrirMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AbrirMnu.Click
+    ''' <summary>
+    ''' Abrimos un archivo existente.
+    ''' </summary>
+    Private Sub Abrir(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AbrirMnu.Click
 
-        'predeterminado asi que sobra
+        'Creamos el filtro.
         OFDialog.Filter = "Documento de texto (*.txt)|*.txt| Todos los archivos(*.*)|*.*"
 
-        'abrimos el fichero
+        'Seleccionaos el fichero.
         If OFDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
 
+            'Guardamos el nombre del fichero.
             fichero = OFDialog.FileName
 
-            'abrimos el fichero para grabar
+            'Abrimos el fichero.
             sr = File.OpenText(OFDialog.FileName)
-            ' TxtText22.Text = sr.ReadToEnd
+            'Cargamos el texto del fichero.
             RTBText.Text = sr.ReadToEnd
             'cerramos el fichero
             sr.Close()
         End If
 
     End Sub
+    ''' <summary>
+    ''' Guardamos el fichero.
+    ''' </summary>
+    Private Sub Guardar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuardarMnu.Click
 
-    Private Sub GuardarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuardarMnu.Click
-
+        'Guardamos el fichero si tiene nombre (ya ha sido guardado o abierto).
         If fichero <> "" Then
 
-            'abrimos el fichero para grabar
+            'Abrimos el fichero.
             sw = File.CreateText(fichero + ".txt")
 
-            'escribimos la informacion del txtFicheros
+            'Escribimos la informacion en el fichero.
             sw.Write(RTBText.Text)
-            '  sw.Write(TxtText22.Text)
-
-            'vaciar memoria
+            'Vaciar memoria.
             sw.Flush()
-            'cerrar
+            'Cerrar el fichero.
             sw.Close()
 
+            'Si no tiene nombre llamamos al método GuardarComo().
         Else
 
-            Me.GuardarCMnu_Click(sender, e)
+            Me.GuardarComo(sender, e)
 
         End If
 
+        'No hay nuevos cambios que guardar.
+        cambios = False
     End Sub
 
+    ''' <summary>
+    ''' Guardamos el fichero definiendo nombre y ubicación.
+    ''' </summary>
+    Private Sub GuardarComo(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuardarCMnu.Click
 
-    Private Sub GuardarCMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuardarCMnu.Click
-
-        'predeterminado asi que sobra
+        'Definimos un filtro.
         SFDialog.Filter = "Documento de texto (*.txt)|*.txt| Todos los archivos(*.*)|*.*"
 
+        'Abrimos el cuadro de diálogo.
         If SFDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
 
-            'abrimos el fichero para grabar
-            sw = File.CreateText(SFDialog.FileName)
+            'Guardamos el nombre del fichero.
             fichero = SFDialog.FileName
 
-            'escribimos la informacion del txtFicheros
+            'Abrimos el fichero.
+            sw = File.CreateText(SFDialog.FileName)
+            'Escribimos la informacion en el fichero.
             sw.Write(RTBText.Text)
-            ' sw.Write(TxtText22.Text)
-            'vaciar memoria
+            'Vaciar memoria.
             sw.Flush()
-            'cerrar
+            'Cerrar
             sw.Close()
 
         End If
 
+        'No hay nuevos cambios que guardar.
         cambios = False
 
     End Sub
 
-    Private Sub SalirMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalirMnu.Click
+    ''' <summary>
+    ''' Salimos del programa.
+    ''' </summary>
+    Private Sub Salir(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalirMnu.Click
 
+        'Cerramos el formulario.
         Me.Close()
 
     End Sub
@@ -151,82 +168,125 @@ Public Class FrmIni
 #End Region
 
 #Region "Editar"
-    Private Sub DeshacerMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeshacerMnu.Click
-        ' Determine if last operation can be undone in text box.    
+    ''' <summary>
+    ''' Deshace la última acción realizada.
+    ''' </summary>
+    Private Sub Deshacer(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeshacerMnu.Click
+
+        'Determina si se puede deshacer la última acción.
         If RTBText.CanUndo = True Then
-            '    If TxtText22.CanUndo = True Then
-            ' Undo the last operation.
+            ' Deshace la acción.
             RTBText.Undo()
-            'TxtText22.Undo()
-            ' Clear the undo buffer to prevent last action from being redone.
-            '    TxtText22.ClearUndo()
-            RTBText.ClearUndo()
+
         End If
     End Sub
 
-    Private Sub CortarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CortarMnu.Click
-        '  If TxtText22.SelectedText <> "" Then
-        If RTBText.SelectedText <> "" Then
-            ' TxtText22.Cut()
+    ''' <summary>
+    ''' Rehace la útlima acción realizada.
+    ''' </summary>
+    Private Sub RehacerMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RehacerMnu.Click
+
+        'Determina si se puede rehacer la última acción.
+        If RTBText.CanRedo = True Then
+
+            'rehace la última acción.
+            RTBText.Redo()
+            
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Corta el texto seleccionado.
+    ''' </summary>
+    Private Sub Cortar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CortarMnu.Click
+
+        'Si hay texto seleccionado lo corta
+        If RTBText.SelectionLength > 0 Then
             RTBText.Cut()
         End If
     End Sub
 
-    Private Sub CopiarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopiarMnu.Click
+    ''' <summary>
+    ''' Copia el texto seleccionado.
+    ''' </summary>
+    Private Sub Copiar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopiarMnu.Click
 
+        'si hay texto selecionado lo copia
         If RTBText.SelectionLength > 0 Then
-            '    If TxtText22.SelectionLength > 0 Then
             RTBText.Copy()
-            ' TxtText22.Copy()
         End If
     End Sub
 
-    Private Sub PegarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PegarMnu.Click
+    ''' <summary>
+    ''' Pega el texto que hay en el portapapeles en la posición del cursos.
+    ''' </summary>
+    Private Sub Pegar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PegarMnu.Click
 
-        'Dim Result As MessageBox.Show("Do you want to paste over current selection?","Pegar", MessageBoxButtons.YesNo)
-
-
-        ' Determine if there is any text in the Clipboard to paste into the text box. 
+       
+        'Determina si hay texto en el portapapeles para pegar.
         If Clipboard.GetDataObject().GetDataPresent(DataFormats.Text) = True Then
-            ' Determine if any text is selected in the text box. 
+            'Determina si hay texto selecionado.
             If RTBText.SelectionLength > 0 Then
-                ' Ask user if they want to paste over currently selected text. 
+
+                'Preguntar al usuario si quieres pegar sobre el texto selecionado.
                 If MessageBox.Show("Do you want to paste over current selection?", _
                     "Cut Example", MessageBoxButtons.YesNo) = DialogResult.No Then
-                    ' Move selection to the point after the current selection and paste.
+                    'En caso negativo, mover el cursor después de la selección.
                     RTBText.SelectionStart = RTBText.SelectionStart + _
                         RTBText.SelectionLength
                 End If
             End If
-            ' Paste current text in Clipboard into text box.
+            'Pegar el texto guardado en el portapapeles.
             RTBText.Paste()
         End If
 
     End Sub
 
-    Private Sub EliminarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EliminarMnu.Click
-        If RTBText.SelectedText <> "" Then
+    ''' <summary>
+    ''' Elimina el texto selecionado
+    ''' </summary>
+    Private Sub Eliminar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EliminarMnu.Click
+        'si hay texto seleccionado lo elimina.
+        If RTBText.SelectionLength > 0 Then
             RTBText.SelectedText = ""
         End If
     End Sub
 
-    Private Sub BuscarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuscarMnu.Click
+    ''' <summary>
+    ''' Abre el formulario para buscar un texto.
+    ''' </summary>
+    Private Sub Buscar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuscarMnu.Click
         BuscarYReemplazar.Show()
     End Sub
 
-    Private Sub ReemplazarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReemplazarMnu.Click
+    ''' <summary>
+    ''' Abrimos el formulario de buscar.
+    ''' </summary>
+    Private Sub BuscarSiguiente(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuscarSMnu.Click
         BuscarYReemplazar.Show()
     End Sub
 
-    Private Sub FuenteMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FuenteMnu.Click
+    ''' <summary>
+    ''' Abre el formulario para reemplazar texto.
+    ''' </summary>
+    Private Sub Reemplazar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReemplazarMnu.Click
+        BuscarYReemplazar.Show()
+    End Sub
 
+    ''' <summary>
+    ''' Cambia la fuente del texto selecionado o de todo el documento.
+    ''' </summary>
+    Private Sub Fuente(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FuenteMnu.Click
+
+        'Abrimos el díalogo y selecionadmos 'Aceptar'.
         If FntDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-            'si no hay nada seleccionado
+            'Si hay texto selecionado aplica los cambios a ese texto.
             If RTBText.SelectedText.Count > 0 Then
                 RTBText.SelectionFont = FntDialog1.Font
 
-                'si hay texto selecionado
+                'Si no hay texto selecionado aplica los cambios a todo el texto del documento.
             Else
                 RTBText.Font = FntDialog1.Font
             End If
@@ -234,13 +294,20 @@ Public Class FrmIni
         End If
     End Sub
 
-    Private Sub ColorMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorMnu.Click
+
+    ''' <summary>    
+    ''' Cambia el color del texto selecionado o de todo el documento.
+    ''' </summary>
+    Private Sub Color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorMnu.Click
+
+        'Abrimos el díalogo y selecionadmos 'Aceptar'.
         If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-            'si no hay nada seleccionado
+            'Si hay texto selecionado aplica los cambios a ese texto.
             If RTBText.SelectedText.Count > 0 Then
-
                 RTBText.SelectionColor = ColorDialog1.Color
+
+                'Si no hay texto selecionado aplica los cambios a todo el texto del documento.
             Else
 
                 RTBText.ForeColor = ColorDialog1.Color
@@ -250,65 +317,71 @@ Public Class FrmIni
         End If
     End Sub
 
-    Private Sub SeleccMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SeleccMnu.Click
+    ''' <summary>
+    ''' Seleccionamos todo el texto del documento.
+    ''' </summary>
+    Private Sub SeleccionarTodo(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SeleccMnu.Click
 
-        'si hay texto que seleccionar
-        '  If TxtText22.SelectionLength = 0 Then
-        If RTBText.SelectionLength = 0 Then
-            ' Seleccionar todo el texto del TextBox
+        'Seleccionamo el texto
             RTBText.SelectAll()
-            ' TxtText22.SelectAll()
-        End If
 
     End Sub
 
+    ''' <summary>
+    '''  Añadimos el la fecha y hora actural del sistema en el texto en la posición del cursor.
+    ''' </summary>
+    ''' <remarks>
+    ''' Formato: 10/11/2014 21:34
+    ''' </remarks>
     Private Sub HoraYFechaMnu_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HoraYFechaMnu.Click
-        ' TxtText.Text = TxtText.Text + Date.Now.ToString("t") + " " + Date.Today.ToString("d")
-        'TxtText.SelectionStart = TxtText.SelectionStart + _TxtText.SelectionLength
-
-        'TxtText.SelectionStart = TxtText.SelectionStart + DateTime.Now.ToString("g")
-
-        'INSERTAR DONDE ESTÉ EL CURSOR
-        'TxtText.SelectionStart = DateTime.Now.ToString("g")
+       
+        'Variable auxiliar para guardar lo que hay en el portapapeles al llamar al método.
         Dim portapapeles As String
 
+        'Guardamos el portapapeles en la variable, y definimos la hora y fecha en el portapapeles.
         portapapeles = Clipboard.GetText
         Clipboard.SetText(DateTime.Now.ToString("g"))
 
-
-        ' Determine if there is any text in the Clipboard to paste into the text box. 
-        If Clipboard.GetDataObject().GetDataPresent(DataFormats.Text) = True Then
-            ' Determine if any text is selected in the text box. 
+        'Determina si hay texto seleccionado.
             If RTBText.SelectionLength > 0 Then
-                ' Ask user if they want to paste over currently selected text. 
+            'Preguntamos al usuario si quiere pegar sobre el texto seleccionado.
                 If MessageBox.Show("Do you want to paste over current selection?", _
                     "Cut Example", MessageBoxButtons.YesNo) = DialogResult.No Then
-                    ' Move selection to the point after the current selection and paste.
+
+                'Movemos el cursor después del texto seleccionado.
                     RTBText.SelectionStart = RTBText.SelectionStart + _
                         RTBText.SelectionLength
                 End If
             End If
-            ' Paste current text in Clipboard into text box.
-            RTBText.Paste()
-        End If
-        Clipboard.SetText(portapapeles)
 
+        'Pegamos el portapapeles (hora y fecha).
+            RTBText.Paste()
+
+        'Volvemos a definir el portapapeles como al principio con la variable auxiliar.
+            Clipboard.SetText(portapapeles)
 
     End Sub
 
 #End Region
 
-    Private Sub AcercaMnu_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AcercaMnu.Click
+    ''' <summary>
+    ''' Muestra un cuadro informativo.
+    ''' </summary>
+    Private Sub AcercaDe(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AcercaMnu.Click
 
         Info.Show()
 
     End Sub
 
+    ''' <summary>
+    ''' Método que se ejecuta al cerrarse el formulario.
+    ''' </summary>
     Private Sub FrmIni_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
 
-        'variable para el resultado del dialogo de mensaje
+        'Variable para el resultado del dialogo de mensaje.
         Dim Result As DialogResult
 
+        'Si se han producido cambios se muestra un mensaje antes de salir con la posibilidad de guardar el archivo o volver a el.
         If cambios = True Then
 
             'Mostramos el mensaje y guardamos el resultado
@@ -316,19 +389,20 @@ Public Class FrmIni
 
             'NO
             If Result = 7 Then
+                'Definimos que no haya cambios que guardar.
                 cambios = False
-                'cerramos el formulario
+                'Cerramos el formulario.
                 Me.Close()
 
                 'YES
             ElseIf Result = 6 Then
-
-                'guardamos el archivo
-                GuardarCMnu_Click(sender, e)
+               
+                'Guardamos el archivo
+                GuardarComo(sender, e)
 
                 'CANCEL
             ElseIf Result = 2 Then
-
+                'Volvemos al formulario.
                 Dim form As FrmIni
                 form.Show()
 
@@ -338,44 +412,73 @@ Public Class FrmIni
 
     End Sub
 
+    ''' <summary>
+    ''' Cuenta el número de palabras.
+    ''' </summary>
+    ''' <returns>Número de palabras en el texto</returns>
+    Public Function CountWords() As Integer
+        Dim collection As MatchCollection = Regex.Matches(RTBText.Text, "\S+")
+        'Devolvemos el número de palabras.
+        Return collection.Count
+    End Function
 
-    Private Sub TxtText_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RTBText.TextChanged
+    ''' <summary>
+    ''' Método que se ejecutará cada vez que se produzca un cambio en el texto. Guadar cambios y mostrar utilidades.
+    ''' </summary>
+    Private Sub TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RTBText.TextChanged
 
-        'mostramos el número de líneas y carácteres que hay
-        txtCont.Text = "Líneas:  " & RTBText.Lines.Length & "      Caractéres:    " & RTBText.TextLength
+        'mostramos el número de líneas, palabras y carácteres que hay
+        txtCont.Text = "Líneas:  " & RTBText.Lines.Length & "      Palabras:    " & CountWords() & "      Caractéres:    " & RTBText.TextLength
+
 
         'habilitamos o deshabiltamos funciones según si haya o no texto
         If RTBText.Text <> "" Then
-            habilitarVacio()
-            '            habilitar()
+            habilitar()
 
-            ' ''si seleccionas texto no está cmabiando
-            'Label2.Text = RTBText.SelectedText.Length
-            'If RTBText.SelectedText.Length > 0 Then
-            '    habilitarSelect()
-            'Else
-            '    deshabilitarSelect()
-            'End If
-            'definimos que se han producido cambios
+            'Definimos que se han producido cambios a guardar.
             cambios = True
 
         Else
-            'deshabilitar()
-            deshabilitarVacio()
-            deshabilitarSelect()
+            deshabilitar()
+
+            'Definimos que los cambios realizados no se deben guardar.
             cambios = False
         End If
 
     End Sub
 
-    Private Sub EditarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditarToolStripMenuItem.Click
+#Region "Apariencia"
+    ''' <summary>
+    ''' Cambiamos el color de fondo de los menus del editor.
+    ''' </summary>
+    Private Sub ColorFondo(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorFondoMnu.Click
 
-        ''si seleccionas texto no está cmabiando
-        ' Label2.Text = RTBText.SelectedText.Length
-        If RTBText.SelectedText.Length > 0 Then
-            habilitarSelect()
-        Else
-            deshabilitarSelect()
+        'Mostramos el diálogo y hacemos clic en "Aceptar".
+        If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+            'Cambiamos el color de fondo por el selecionado.
+            Mnu.BackColor = ColorDialog1.Color
+            txtCont.BackColor = ColorDialog1.Color
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Cambiamos el color del texto de los menus del editor.
+    ''' </summary>
+    Private Sub ColorTexto(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorTextoMnu.Click
+
+        'Mostramos el diálogo y hacemos clic en "Aceptar".
+        If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+            'Cambiamos el color de fondo por el selecionado.
+            Mnu.ForeColor = ColorDialog1.Color
+            txtCont.ForeColor = ColorDialog1.Color
+
         End If
     End Sub
+#End Region
+
+
 End Class

@@ -22,13 +22,12 @@ Partial Class FrmIni
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmIni))
         Me.OFDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SFDialog = New System.Windows.Forms.SaveFileDialog()
         Me.FntDialog1 = New System.Windows.Forms.FontDialog()
         Me.Mnu = New System.Windows.Forms.MenuStrip()
-        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArchivoMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbrirMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -36,33 +35,32 @@ Partial Class FrmIni
         Me.GuardarCMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SalirMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeshacerMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RehacerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RehacerMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.CortarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopiarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.PegarMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BuscarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarSMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReemplazarMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.SeleccMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.HoraYFechaMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HerramientasMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.FuenteMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AparienciaMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorFondoMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorTextoMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AyudaMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCont = New System.Windows.Forms.TextBox()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.RTBText = New System.Windows.Forms.RichTextBox()
-        Me.EliminarMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Mnu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -77,20 +75,20 @@ Partial Class FrmIni
         '
         'Mnu
         '
-        Me.Mnu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.EditarToolStripMenuItem, Me.HerramientasToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.Mnu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoMnu, Me.EditarMnu, Me.HerramientasMnu, Me.AyudaMnu})
         Me.Mnu.Location = New System.Drawing.Point(0, 0)
         Me.Mnu.Name = "Mnu"
         Me.Mnu.Size = New System.Drawing.Size(391, 24)
         Me.Mnu.TabIndex = 2
         Me.Mnu.Text = "MenuStrip1"
         '
-        'ArchivoToolStripMenuItem
+        'ArchivoMnu
         '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoMnu, Me.AbrirMnu, Me.toolStripSeparator1, Me.GuardarMnu, Me.GuardarCMnu, Me.toolStripSeparator2, Me.SalirMnu})
-        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ArchivoToolStripMenuItem.Text = "&Archivo"
+        Me.ArchivoMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoMnu, Me.AbrirMnu, Me.toolStripSeparator1, Me.GuardarMnu, Me.GuardarCMnu, Me.toolStripSeparator2, Me.SalirMnu})
+        Me.ArchivoMnu.Name = "ArchivoMnu"
+        Me.ArchivoMnu.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.ArchivoMnu.Size = New System.Drawing.Size(60, 20)
+        Me.ArchivoMnu.Text = "&Archivo"
         '
         'NuevoMnu
         '
@@ -141,13 +139,13 @@ Partial Class FrmIni
         Me.SalirMnu.Size = New System.Drawing.Size(156, 22)
         Me.SalirMnu.Text = "&Salir"
         '
-        'EditarToolStripMenuItem
+        'EditarMnu
         '
-        Me.EditarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeshacerMnu, Me.RehacerToolStripMenuItem, Me.toolStripSeparator3, Me.CortarMnu, Me.CopiarMnu, Me.PegarMnu, Me.EliminarMnu, Me.toolStripSeparator4, Me.BuscarMnu, Me.BuscarSMnu, Me.ReemplazarMnu, Me.ToolStripSeparator5, Me.SeleccMnu, Me.HoraYFechaMnu})
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
-        Me.EditarToolStripMenuItem.Text = "&Editar"
+        Me.EditarMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeshacerMnu, Me.RehacerMnu, Me.toolStripSeparator3, Me.CortarMnu, Me.CopiarMnu, Me.PegarMnu, Me.EliminarMnu, Me.toolStripSeparator4, Me.BuscarMnu, Me.BuscarSMnu, Me.ReemplazarMnu, Me.ToolStripSeparator5, Me.SeleccMnu, Me.HoraYFechaMnu})
+        Me.EditarMnu.Name = "EditarMnu"
+        Me.EditarMnu.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.EditarMnu.Size = New System.Drawing.Size(49, 20)
+        Me.EditarMnu.Text = "&Editar"
         '
         'DeshacerMnu
         '
@@ -157,12 +155,12 @@ Partial Class FrmIni
         Me.DeshacerMnu.Size = New System.Drawing.Size(202, 22)
         Me.DeshacerMnu.Text = "&Deshacer"
         '
-        'RehacerToolStripMenuItem
+        'RehacerMnu
         '
-        Me.RehacerToolStripMenuItem.Name = "RehacerToolStripMenuItem"
-        Me.RehacerToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.RehacerToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
-        Me.RehacerToolStripMenuItem.Text = "&Rehacer"
+        Me.RehacerMnu.Name = "RehacerMnu"
+        Me.RehacerMnu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
+        Me.RehacerMnu.Size = New System.Drawing.Size(202, 22)
+        Me.RehacerMnu.Text = "&Rehacer"
         '
         'toolStripSeparator3
         '
@@ -198,6 +196,13 @@ Partial Class FrmIni
         Me.PegarMnu.Size = New System.Drawing.Size(202, 22)
         Me.PegarMnu.Text = "&Pegar"
         '
+        'EliminarMnu
+        '
+        Me.EliminarMnu.Enabled = False
+        Me.EliminarMnu.Name = "EliminarMnu"
+        Me.EliminarMnu.Size = New System.Drawing.Size(202, 22)
+        Me.EliminarMnu.Text = "Eliminar"
+        '
         'toolStripSeparator4
         '
         Me.toolStripSeparator4.Name = "toolStripSeparator4"
@@ -213,17 +218,10 @@ Partial Class FrmIni
         '
         'BuscarSMnu
         '
-        Me.BuscarSMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
         Me.BuscarSMnu.Enabled = False
         Me.BuscarSMnu.Name = "BuscarSMnu"
         Me.BuscarSMnu.Size = New System.Drawing.Size(202, 22)
         Me.BuscarSMnu.Text = "Buscar siguiente"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(77, 22)
-        Me.ToolStripMenuItem2.Text = " "
         '
         'ReemplazarMnu
         '
@@ -251,53 +249,58 @@ Partial Class FrmIni
         Me.HoraYFechaMnu.Size = New System.Drawing.Size(202, 22)
         Me.HoraYFechaMnu.Text = "Hora y fecha"
         '
-        'HerramientasToolStripMenuItem
+        'HerramientasMnu
         '
-        Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FuenteMnu, Me.ColorMnu})
-        Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
-        Me.HerramientasToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
-        Me.HerramientasToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
-        Me.HerramientasToolStripMenuItem.Text = "&Herramientas"
+        Me.HerramientasMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FuenteMnu, Me.ColorMnu, Me.AparienciaMnu})
+        Me.HerramientasMnu.Name = "HerramientasMnu"
+        Me.HerramientasMnu.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.HerramientasMnu.Size = New System.Drawing.Size(90, 20)
+        Me.HerramientasMnu.Text = "&Herramientas"
         '
         'FuenteMnu
         '
         Me.FuenteMnu.Name = "FuenteMnu"
-        Me.FuenteMnu.Size = New System.Drawing.Size(119, 22)
+        Me.FuenteMnu.Size = New System.Drawing.Size(152, 22)
         Me.FuenteMnu.Text = "Fuente..."
         '
         'ColorMnu
         '
         Me.ColorMnu.Name = "ColorMnu"
-        Me.ColorMnu.Size = New System.Drawing.Size(119, 22)
+        Me.ColorMnu.Size = New System.Drawing.Size(152, 22)
         Me.ColorMnu.Text = "Color..."
         '
-        'AyudaToolStripMenuItem
+        'AparienciaMnu
         '
-        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaMnu})
-        Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
-        Me.AyudaToolStripMenuItem.Text = "Ay&uda"
+        Me.AparienciaMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColorFondoMnu, Me.ColorTextoMnu})
+        Me.AparienciaMnu.Name = "AparienciaMnu"
+        Me.AparienciaMnu.Size = New System.Drawing.Size(152, 22)
+        Me.AparienciaMnu.Text = "Personalizar..."
+        '
+        'ColorFondoMnu
+        '
+        Me.ColorFondoMnu.Name = "ColorFondoMnu"
+        Me.ColorFondoMnu.Size = New System.Drawing.Size(152, 22)
+        Me.ColorFondoMnu.Text = "Color fondo"
+        '
+        'ColorTextoMnu
+        '
+        Me.ColorTextoMnu.Name = "ColorTextoMnu"
+        Me.ColorTextoMnu.Size = New System.Drawing.Size(152, 22)
+        Me.ColorTextoMnu.Text = "Color texto"
+        '
+        'AyudaMnu
+        '
+        Me.AyudaMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaMnu})
+        Me.AyudaMnu.Name = "AyudaMnu"
+        Me.AyudaMnu.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
+        Me.AyudaMnu.Size = New System.Drawing.Size(53, 20)
+        Me.AyudaMnu.Text = "Ay&uda"
         '
         'AcercaMnu
         '
         Me.AcercaMnu.Name = "AcercaMnu"
-        Me.AcercaMnu.Size = New System.Drawing.Size(135, 22)
+        Me.AcercaMnu.Size = New System.Drawing.Size(152, 22)
         Me.AcercaMnu.Text = "&Acerca de..."
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(326, 319)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "pal"
         '
         'txtCont
         '
@@ -308,10 +311,11 @@ Partial Class FrmIni
         Me.txtCont.ReadOnly = True
         Me.txtCont.Size = New System.Drawing.Size(391, 20)
         Me.txtCont.TabIndex = 4
-        Me.txtCont.Text = "Líneas:  0      Caractéres:    0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.txtCont.Text = "Líneas:  0      Palabras:    0      Caractéres:    0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'RTBText
         '
+        Me.RTBText.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.RTBText.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RTBText.Location = New System.Drawing.Point(0, 24)
         Me.RTBText.Name = "RTBText"
@@ -320,32 +324,14 @@ Partial Class FrmIni
         Me.RTBText.TabIndex = 7
         Me.RTBText.Text = ""
         '
-        'EliminarMnu
-        '
-        Me.EliminarMnu.Enabled = False
-        Me.EliminarMnu.Name = "EliminarMnu"
-        Me.EliminarMnu.Size = New System.Drawing.Size(202, 22)
-        Me.EliminarMnu.Text = "Eliminar"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(275, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Label2"
-        '
         'FrmIni
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(391, 336)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.RTBText)
         Me.Controls.Add(Me.txtCont)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Mnu)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmIni"
@@ -360,7 +346,7 @@ Partial Class FrmIni
     Friend WithEvents SFDialog As System.Windows.Forms.SaveFileDialog
     Friend WithEvents FntDialog1 As System.Windows.Forms.FontDialog
     Friend WithEvents Mnu As System.Windows.Forms.MenuStrip
-    Friend WithEvents ArchivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ArchivoMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NuevoMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AbrirMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents toolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
@@ -368,32 +354,31 @@ Partial Class FrmIni
     Friend WithEvents GuardarCMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents toolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SalirMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EditarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EditarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeshacerMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RehacerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RehacerMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents toolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CortarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CopiarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PegarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents toolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SeleccMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HerramientasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HerramientasMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FuenteMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AyudaMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarSMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReemplazarMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents HoraYFechaMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtCont As System.Windows.Forms.TextBox
     Friend WithEvents ColorMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
     Friend WithEvents RTBText As System.Windows.Forms.RichTextBox
     Friend WithEvents EliminarMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents AparienciaMnu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ColorFondoMnu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ColorTextoMnu As System.Windows.Forms.ToolStripMenuItem
 
 End Class

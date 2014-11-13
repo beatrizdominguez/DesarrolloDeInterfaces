@@ -31,3 +31,16 @@ C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\Bl
 C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Info.resources
 C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Resources.resources
 C:\Users\Beatriz\Dropbox\DAM2\INTERFACES- Desarrollo de interfaces\ejercicios\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.vbproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.exe
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.xml
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\BlocDeNotas.pdb
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.exe
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.pdb
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.xml
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.FrmIni.resources
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.BuscarYReemplazar.resources
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Info.resources
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\usuario\Desktop\DesarrolloDeInterfaces-master\BlocDeNotas\BlocDeNotas\obj\x86\Debug\GenerateResource.write.1.tlog

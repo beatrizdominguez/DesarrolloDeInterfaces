@@ -31,8 +31,6 @@ Partial Class BuscarYReemplazar
         Me.BtnReplace = New System.Windows.Forms.Button()
         Me.BtnReplaceAll = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LblBuscar
@@ -47,7 +45,7 @@ Partial Class BuscarYReemplazar
         'LblReplace
         '
         Me.LblReplace.AutoSize = True
-        Me.LblReplace.Location = New System.Drawing.Point(23, 49)
+        Me.LblReplace.Location = New System.Drawing.Point(23, 57)
         Me.LblReplace.Name = "LblReplace"
         Me.LblReplace.Size = New System.Drawing.Size(66, 26)
         Me.LblReplace.TabIndex = 0
@@ -62,7 +60,7 @@ Partial Class BuscarYReemplazar
         '
         'TxtReplace
         '
-        Me.TxtReplace.Location = New System.Drawing.Point(95, 55)
+        Me.TxtReplace.Location = New System.Drawing.Point(95, 57)
         Me.TxtReplace.Name = "TxtReplace"
         Me.TxtReplace.Size = New System.Drawing.Size(233, 20)
         Me.TxtReplace.TabIndex = 2
@@ -103,31 +101,11 @@ Partial Class BuscarYReemplazar
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(53, 101)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "stPos"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(38, 123)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(31, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Leng"
-        '
         'BuscarYReemplazar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(509, 177)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnReplaceAll)
         Me.Controls.Add(Me.BtnReplace)
@@ -152,6 +130,4 @@ Partial Class BuscarYReemplazar
     Friend WithEvents BtnReplace As System.Windows.Forms.Button
     Friend WithEvents BtnReplaceAll As System.Windows.Forms.Button
     Friend WithEvents BtnCancelar As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

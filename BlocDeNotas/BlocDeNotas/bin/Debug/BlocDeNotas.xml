@@ -6,7 +6,140 @@ BlocDeNotas
 </name>
 </assembly>
 <members>
-<member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
+<member name="M:WindowsApplication1.BuscarYReemplazar.BtnCancelar_Click(System.Object,System.EventArgs)">
+	<summary>
+ cierra el formulario
+ </summary>
+</member><member name="M:WindowsApplication1.BuscarYReemplazar.BuscarS_Click(System.Object,System.EventArgs)">
+	<summary>
+ busca en el texto la siguiente instnacia de una cadena
+ </summary>
+</member><member name="M:WindowsApplication1.BuscarYReemplazar.BtnReplace_Click(System.Object,System.EventArgs)">
+	<summary>
+ Reemplaza la primera instancia de una cadena por otra cadena dada
+ </summary>
+</member><member name="M:WindowsApplication1.BuscarYReemplazar.BtnReplaceAll_Click(System.Object,System.EventArgs)">
+	<summary>
+ reemplaza todas las instancias de una cadena por otra dada
+ </summary>
+</member><member name="T:WindowsApplication1.BuscarYReemplazar">
+	<summary>
+ Editor de texto. Formulario de busqueda y reemplazo
+ </summary>
+	<Autor>
+ Beatriz Domínguez
+ </Autor>
+</member><member name="M:WindowsApplication1.FrmIni.Nuevo(System.Object,System.EventArgs)">
+	<summary>
+ Creamos un nuevo archivo.
+ </summary>
+	<remarks>
+ Si hay cambios sin guardar se da la opción de guardar antes de crear el nuevo archivo.
+ </remarks>
+</member><member name="M:WindowsApplication1.FrmIni.Abrir(System.Object,System.EventArgs)">
+	<summary>
+ Abrimos un archivo existente.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Guardar(System.Object,System.EventArgs)">
+	<summary>
+ Guardamos el fichero.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.GuardarComo(System.Object,System.EventArgs)">
+	<summary>
+ Guardamos el fichero definiendo nombre y ubicación.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Salir(System.Object,System.EventArgs)">
+	<summary>
+ Salimos del programa.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Deshacer(System.Object,System.EventArgs)">
+	<summary>
+ Deshace la última acción realizada.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.RehacerMnu_Click(System.Object,System.EventArgs)">
+	<summary>
+ Rehace la útlima acción realizada.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Cortar(System.Object,System.EventArgs)">
+	<summary>
+ Corta el texto seleccionado.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Copiar(System.Object,System.EventArgs)">
+	<summary>
+ Copia el texto seleccionado.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Pegar(System.Object,System.EventArgs)">
+	<summary>
+ Pega el texto que hay en el portapapeles en la posición del cursos.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Eliminar(System.Object,System.EventArgs)">
+	<summary>
+ Elimina el texto selecionado
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Buscar(System.Object,System.EventArgs)">
+	<summary>
+ Abre el formulario para buscar un texto.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.BuscarSiguiente(System.Object,System.EventArgs)">
+	<summary>
+ Abrimos el formulario de buscar.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Reemplazar(System.Object,System.EventArgs)">
+	<summary>
+ Abre el formulario para reemplazar texto.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Fuente(System.Object,System.EventArgs)">
+	<summary>
+ Cambia la fuente del texto selecionado o de todo el documento.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.Color(System.Object,System.EventArgs)">
+	<summary>    
+ Cambia el color del texto selecionado o de todo el documento.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.SeleccionarTodo(System.Object,System.EventArgs)">
+	<summary>
+ Seleccionamos todo el texto del documento.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.HoraYFechaMnu_Click_1(System.Object,System.EventArgs)">
+	<summary>
+  Añadimos el la fecha y hora actural del sistema en el texto en la posición del cursor.
+ </summary>
+	<remarks>
+ Formato: 10/11/2014 21:34
+ </remarks>
+</member><member name="M:WindowsApplication1.FrmIni.AcercaDe(System.Object,System.EventArgs)">
+	<summary>
+ Muestra un cuadro informativo.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.FrmIni_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+	<summary>
+ Método que se ejecuta al cerrarse el formulario.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.CountWords">
+	<summary>
+ Cuenta el número de palabras.
+ </summary>
+	<returns>Número de palabras en el texto</returns>
+</member><member name="M:WindowsApplication1.FrmIni.TextChanged_1(System.Object,System.EventArgs)">
+	<summary>
+ Método que se ejecutará cada vez que se produzca un cambio en el texto. Guadar cambios y mostrar utilidades.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.ColorFondo(System.Object,System.EventArgs)">
+	<summary>
+ Cambiamos el color de fondo de los menus del editor.
+ </summary>
+</member><member name="M:WindowsApplication1.FrmIni.ColorTexto(System.Object,System.EventArgs)">
+	<summary>
+ Cambiamos el color del texto de los menus del editor.
+ </summary>
+</member><member name="T:WindowsApplication1.FrmIni">
+	<summary>
+ Editor de texto
+ </summary>
+	<Autor>
+ Beatriz Domínguez
+ </Autor>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
 	<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
@@ -23,6 +156,14 @@ BlocDeNotas
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
+</member><member name="M:WindowsApplication1.funciones.habilitar">
+	<summary>
+ Habilita opciones del menú.
+ </summary>
+</member><member name="M:WindowsApplication1.funciones.deshabilitar">
+	<summary>
+ Deshabilita opciones del menú.
+ </summary>
 </member>
 </members>
 </doc>
