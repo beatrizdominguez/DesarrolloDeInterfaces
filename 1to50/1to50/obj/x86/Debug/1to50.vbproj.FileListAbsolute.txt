@@ -1,0 +1,19 @@
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\bin\Debug\1to50.exe
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\bin\Debug\1to50.pdb
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\bin\Debug\1to50.xml
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\obj\x86\Debug\_1to50.Form1.resources
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\obj\x86\Debug\_1to50.Resources.resources
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\obj\x86\Debug\1to50.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\obj\x86\Debug\1to50.exe
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\obj\x86\Debug\1to50.xml
+C:\Users\Beatriz\AppData\Local\Temporary Projects\1to50\obj\x86\Debug\1to50.pdb
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\obj\x86\Debug\1to50.exe
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\obj\x86\Debug\1to50.xml
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\obj\x86\Debug\1to50.pdb
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\obj\x86\Debug\_1to50.Resources.resources
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\obj\x86\Debug\1to50.vbproj.GenerateResource.Cache
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\bin\Debug\1to50.exe
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\bin\Debug\1to50.pdb
+C:\Users\Beatriz\documents\visual studio 2010\Projects\1to50\1to50\bin\Debug\1to50.xml
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\1to50\1to50\obj\x86\Debug\_1to50.Juego.resources
+C:\Users\Beatriz\Documents\Visual Studio 2010\Projects\1to50\1to50\obj\x86\Debug\_1to50.Tiempos.resources
