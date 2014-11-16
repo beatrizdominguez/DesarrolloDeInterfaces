@@ -33,6 +33,7 @@ Partial Class Tiempos
         Me.ListBox1.Location = New System.Drawing.Point(0, 71)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(364, 277)
+        Me.ListBox1.Sorted = True
         Me.ListBox1.TabIndex = 0
         '
         'Label1

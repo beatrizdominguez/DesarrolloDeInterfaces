@@ -27,11 +27,15 @@ Partial Class Juego
         Me.lblTime = New System.Windows.Forms.Label()
         Me.lblInstrucciones = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.NivlesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModalidadMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NumerosMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColoresMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MulticolorCMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AzulCMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VerdeCMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MonocromoCMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.SimbolosMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TiemposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TiemposMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btn1 = New System.Windows.Forms.Button()
         Me.btn2 = New System.Windows.Forms.Button()
@@ -61,7 +65,6 @@ Partial Class Juego
         Me.lblErrores = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -69,7 +72,7 @@ Partial Class Juego
         'btnInicio
         '
         Me.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInicio.Font = New System.Drawing.Font("Cooper Black", 12.0!)
         Me.btnInicio.Location = New System.Drawing.Point(130, 107)
         Me.btnInicio.Name = "btnInicio"
         Me.btnInicio.Size = New System.Drawing.Size(155, 37)
@@ -99,19 +102,19 @@ Partial Class Juego
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NivlesToolStripMenuItem, Me.TiemposToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModalidadMnu, Me.TiemposMnu})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(442, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'NivlesToolStripMenuItem
+        'ModalidadMnu
         '
-        Me.NivlesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NumerosMnu, Me.ColoresMnu, Me.SimbolosMnu})
-        Me.NivlesToolStripMenuItem.Name = "NivlesToolStripMenuItem"
-        Me.NivlesToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
-        Me.NivlesToolStripMenuItem.Text = "Nivles"
+        Me.ModalidadMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NumerosMnu, Me.ColoresMnu, Me.SimbolosMnu})
+        Me.ModalidadMnu.Name = "ModalidadMnu"
+        Me.ModalidadMnu.Size = New System.Drawing.Size(87, 20)
+        Me.ModalidadMnu.Text = "Modalidades"
         '
         'NumerosMnu
         '
@@ -126,10 +129,35 @@ Partial Class Juego
         'ColoresMnu
         '
         Me.ColoresMnu.CheckOnClick = True
+        Me.ColoresMnu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MulticolorCMnu, Me.AzulCMnu, Me.VerdeCMnu, Me.MonocromoCMnu})
         Me.ColoresMnu.Name = "ColoresMnu"
         Me.ColoresMnu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.ColoresMnu.Size = New System.Drawing.Size(166, 22)
         Me.ColoresMnu.Text = "Colores"
+        '
+        'MulticolorCMnu
+        '
+        Me.MulticolorCMnu.Name = "MulticolorCMnu"
+        Me.MulticolorCMnu.Size = New System.Drawing.Size(160, 22)
+        Me.MulticolorCMnu.Text = "Multicolor"
+        '
+        'AzulCMnu
+        '
+        Me.AzulCMnu.Name = "AzulCMnu"
+        Me.AzulCMnu.Size = New System.Drawing.Size(160, 22)
+        Me.AzulCMnu.Text = "Azules"
+        '
+        'VerdeCMnu
+        '
+        Me.VerdeCMnu.Name = "VerdeCMnu"
+        Me.VerdeCMnu.Size = New System.Drawing.Size(160, 22)
+        Me.VerdeCMnu.Text = "Verdes"
+        '
+        'MonocromoCMnu
+        '
+        Me.MonocromoCMnu.Name = "MonocromoCMnu"
+        Me.MonocromoCMnu.Size = New System.Drawing.Size(160, 22)
+        Me.MonocromoCMnu.Text = "Monocromático"
         '
         'SimbolosMnu
         '
@@ -138,11 +166,11 @@ Partial Class Juego
         Me.SimbolosMnu.Size = New System.Drawing.Size(166, 22)
         Me.SimbolosMnu.Text = "Símbolos"
         '
-        'TiemposToolStripMenuItem
+        'TiemposMnu
         '
-        Me.TiemposToolStripMenuItem.Name = "TiemposToolStripMenuItem"
-        Me.TiemposToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.TiemposToolStripMenuItem.Text = "Tiempos"
+        Me.TiemposMnu.Name = "TiemposMnu"
+        Me.TiemposMnu.Size = New System.Drawing.Size(65, 20)
+        Me.TiemposMnu.Text = "Tiempos"
         '
         'TableLayoutPanel1
         '
@@ -192,6 +220,7 @@ Partial Class Juego
         'btn1
         '
         Me.btn1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn1.Enabled = False
         Me.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn1.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn1.ForeColor = System.Drawing.Color.White
@@ -205,6 +234,7 @@ Partial Class Juego
         'btn2
         '
         Me.btn2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn2.Enabled = False
         Me.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn2.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn2.ForeColor = System.Drawing.Color.White
@@ -218,6 +248,7 @@ Partial Class Juego
         'btn3
         '
         Me.btn3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn3.Enabled = False
         Me.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn3.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn3.ForeColor = System.Drawing.Color.White
@@ -231,6 +262,7 @@ Partial Class Juego
         'btn4
         '
         Me.btn4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn4.Enabled = False
         Me.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn4.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn4.ForeColor = System.Drawing.Color.White
@@ -244,6 +276,7 @@ Partial Class Juego
         'btn5
         '
         Me.btn5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn5.Enabled = False
         Me.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn5.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn5.ForeColor = System.Drawing.Color.White
@@ -257,6 +290,7 @@ Partial Class Juego
         'btn6
         '
         Me.btn6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn6.Enabled = False
         Me.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn6.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn6.ForeColor = System.Drawing.Color.White
@@ -270,6 +304,7 @@ Partial Class Juego
         'btn7
         '
         Me.btn7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn7.Enabled = False
         Me.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn7.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn7.ForeColor = System.Drawing.Color.White
@@ -283,6 +318,7 @@ Partial Class Juego
         'btn8
         '
         Me.btn8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn8.Enabled = False
         Me.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn8.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn8.ForeColor = System.Drawing.Color.White
@@ -296,6 +332,7 @@ Partial Class Juego
         'btn9
         '
         Me.btn9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn9.Enabled = False
         Me.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn9.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn9.ForeColor = System.Drawing.Color.White
@@ -309,6 +346,7 @@ Partial Class Juego
         'btn10
         '
         Me.btn10.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn10.Enabled = False
         Me.btn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn10.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn10.ForeColor = System.Drawing.Color.White
@@ -322,6 +360,7 @@ Partial Class Juego
         'btn15
         '
         Me.btn15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn15.Enabled = False
         Me.btn15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn15.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn15.ForeColor = System.Drawing.Color.White
@@ -335,6 +374,7 @@ Partial Class Juego
         'btn14
         '
         Me.btn14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn14.Enabled = False
         Me.btn14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn14.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn14.ForeColor = System.Drawing.Color.White
@@ -348,6 +388,7 @@ Partial Class Juego
         'btn13
         '
         Me.btn13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn13.Enabled = False
         Me.btn13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn13.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn13.ForeColor = System.Drawing.Color.White
@@ -361,6 +402,7 @@ Partial Class Juego
         'btn12
         '
         Me.btn12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn12.Enabled = False
         Me.btn12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn12.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn12.ForeColor = System.Drawing.Color.White
@@ -374,6 +416,7 @@ Partial Class Juego
         'btn11
         '
         Me.btn11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn11.Enabled = False
         Me.btn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn11.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn11.ForeColor = System.Drawing.Color.White
@@ -452,6 +495,7 @@ Partial Class Juego
         'btn25
         '
         Me.btn25.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn25.Enabled = False
         Me.btn25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn25.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn25.ForeColor = System.Drawing.Color.White
@@ -465,6 +509,7 @@ Partial Class Juego
         'btn24
         '
         Me.btn24.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn24.Enabled = False
         Me.btn24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn24.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn24.ForeColor = System.Drawing.Color.White
@@ -478,6 +523,7 @@ Partial Class Juego
         'btn23
         '
         Me.btn23.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn23.Enabled = False
         Me.btn23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn23.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn23.ForeColor = System.Drawing.Color.White
@@ -491,6 +537,7 @@ Partial Class Juego
         'btn22
         '
         Me.btn22.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn22.Enabled = False
         Me.btn22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn22.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn22.ForeColor = System.Drawing.Color.White
@@ -504,6 +551,7 @@ Partial Class Juego
         'btn21
         '
         Me.btn21.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn21.Enabled = False
         Me.btn21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn21.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn21.ForeColor = System.Drawing.Color.White
@@ -530,21 +578,13 @@ Partial Class Juego
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Webdings", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
         Me.Button1.Location = New System.Drawing.Point(337, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(84, 46)
         Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(294, 92)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(43, 68)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'Juego
         '
@@ -552,7 +592,6 @@ Partial Class Juego
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(442, 499)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblErrores)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -575,11 +614,11 @@ Partial Class Juego
     Friend WithEvents lblTime As System.Windows.Forms.Label
     Friend WithEvents lblInstrucciones As System.Windows.Forms.Label
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents NivlesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ModalidadMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NumerosMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ColoresMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SimbolosMnu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TiemposToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TiemposMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btn1 As System.Windows.Forms.Button
     Friend WithEvents lblErrores As System.Windows.Forms.Label
@@ -609,6 +648,9 @@ Partial Class Juego
     Friend WithEvents btn21 As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents MulticolorCMnu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AzulCMnu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VerdeCMnu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MonocromoCMnu As System.Windows.Forms.ToolStripMenuItem
 
 End Class
