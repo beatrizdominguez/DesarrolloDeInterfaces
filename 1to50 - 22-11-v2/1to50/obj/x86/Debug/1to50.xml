@@ -1,0 +1,158 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+1to50
+</name>
+</assembly>
+<members>
+<member name="M:_1to50.FinPartida.continuar(System.Object,System.EventArgs)">
+	<summary>
+ Cerramos el forulario para continuar
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+</member><member name="M:_1to50.FinPartida.CerrarFormulario(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+	<summary>
+ Cuando se cierra el formulario se introduce la información de la partida a la tabla de tiempos
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+</member><member name="M:_1to50.FinPartida.OnKeyDownHandler(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ El formulario se cierra si se presiona la tecla 'Enter' estándo sobre el TxtNombre
+ </summary>
+	<param name="sender"></param>
+	<param name="e">Tecla</param>
+	<remarks></remarks>
+</member><member name="M:_1to50.FinPartida.FinPartida_Load(System.Object,System.EventArgs)">
+	<summary>
+ Al abrir el formulario suena una música de vistoria
+ </summary>
+</member><member name="M:_1to50.Funciones.cargarVectorColores(System.String,System.Object[])">
+	<summary>
+ Cargamos un array según un criterio, paleta
+ </summary>
+	<param name="paleta">Gama de colores</param>
+	<param name="colores">Vector de objetos </param>
+	<returns>colores (array lleno)</returns>
+</member><member name="M:_1to50.Funciones.cargarVectorSimbolos(System.String,System.String[])">
+	<summary>
+ Cargamos un array con diferentes signos según el grupo
+ </summary>
+	<param name="grupo">Grupo de símbolos que se van a utilizar</param>
+	<param name="iconos">Array lleno con los símbolos</param>
+	<returns>iconos (array lleno)</returns>
+	<remarks></remarks>
+</member><member name="M:_1to50.Funciones.fin">
+	<summary>
+ El juego ha acadabo
+ </summary>
+</member><member name="M:_1to50.Funciones.modalidadColor">
+	<summary>
+ Funcion que devuelve el nombre de la modalidad de color a la que se está jugando
+ </summary>
+	<returns>Nombre de la modalidad de color</returns>
+</member><member name="M:_1to50.Funciones.nombreJugador">
+	<summary>
+ xxxxx el nombre del jugador.
+ </summary>
+	<returns>nombre</returns>
+</member><member name="M:_1to50.Funciones.añadirPartida">
+	<summary>
+ Añade la información de la partida a la tabla de tiempos
+ </summary>
+</member><member name="M:_1to50.Funciones.menus">
+	<summary>
+ Desmarcamos todos los menus y submenus
+ </summary>
+</member><member name="M:_1to50.Funciones.desactivar">
+	<summary>
+ Desactivamos todos los botones del panel para que no se pueda hacer clic sobre ellos
+ </summary>
+</member><member name="M:_1to50.Funciones.activar">
+	<summary>
+ Activamos todos los botones del panel para jugar
+ </summary>
+	<remarks></remarks>
+</member><member name="M:_1to50.Juego.InicioJuego(System.Object,System.EventArgs)">
+	<summary>
+ Cargamos una nueva partida y comenzamos a contar el tiempo
+ </summary>
+	<param name="sender">Boton para empezar a jugar</param>
+</member><member name="M:_1to50.Juego.version(System.Object,System.EventArgs)">
+	<summary>
+ Cambiamos el juego según la modalidad deseada
+ </summary>
+	<param name="selectedOption">Modalidad a jugar</param>
+</member><member name="M:_1to50.Juego.comprobar(System.Object,System.EventArgs)">
+	<summary>
+ Según la modalidad de juego se comprogará que el botón clicado sea el correcto
+ </summary>
+	<param name="clickedButton">Botón del panel sobre el que se ha hecho clic</param>
+</member><member name="M:_1to50.Juego.comprobarNumeros(System.Object)">
+	<summary>
+ En la modalidad de juego de números comprobamos que lo haga en el orden correcto
+ </summary>
+	<param name="clickedButton">Botón sobre el que se hace clic</param>
+</member><member name="M:_1to50.Juego.comprobarColores(System.Object)">
+	<summary>
+ En la modalidad de juego por números, se comprueba que se haga clic en el color correcto
+ </summary>
+	<param name="clickedButton">Botón sobre el que se hace clic</param>
+	<remarks></remarks>
+</member><member name="M:_1to50.Juego.comprobarSimbolo(System.Object)">
+	<summary>
+ En la modalidad de juebo con símbolos, se comprueba que se haga clic sobre el símbolo correcto
+ </summary>
+	<param name="clickedButton">Botón sobre el que se hace clic</param>
+</member><member name="M:_1to50.Juego.Tiempo(System.Object,System.EventArgs)">
+	<summary>
+ Control del tiempo y mostrar por pantalla
+ </summary>
+</member><member name="M:_1to50.Juego.CuadroTiempos(System.Object,System.EventArgs)">
+	<summary>
+ Mostramos el cuadro con los tiempos de juego
+ </summary>
+</member><member name="M:_1to50.Juego.stopAudio">
+	<summary>
+ Los sonidos que pudieran estar reproduciendose se paran
+ </summary>
+	<remarks></remarks>
+</member><member name="P:_1to50.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:_1to50.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="P:_1to50.My.Resources.Resources._error">
+	<summary>
+  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+</summary>
+</member><member name="P:_1to50.My.Resources.Resources.aplausos">
+	<summary>
+  Busca una cadena traducida similar a .
+</summary>
+</member><member name="P:_1to50.My.Resources.Resources.aplausos1">
+	<summary>
+  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+</summary>
+</member><member name="P:_1to50.My.Resources.Resources.historialPartidas">
+	<summary>
+  Busca una cadena traducida similar a 00:00:34:8     Numeros    0     22/11/2014 12:59     bea
+.
+</summary>
+</member><member name="P:_1to50.My.Resources.Resources.reloj">
+	<summary>
+  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+</summary>
+</member><member name="T:_1to50.My.Resources.Resources">
+	<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+</members>
+</doc>
