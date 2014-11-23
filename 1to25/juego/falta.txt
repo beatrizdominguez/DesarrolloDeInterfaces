@@ -1,0 +1,13 @@
+DONE'cargar y guardar partidas (archivo)
+DONE'música final de partida
+DONE 'iconos del juego
+DONE'interfaz (colores)
+
+FIXED'no me deja cerrar el formulario de tiempos
+'cuando suena el sonido de error deja de sonar el tic tac
+	cuando se reproduce el mensaje de error si el tiempo es mayor que x que se reproduzca acto seguido el otro
+
+http://www.xtremevbtalk.com/showthread.php?t=304783
+playsound
+
+'el archivo que utilice sea el de recursos
